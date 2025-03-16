@@ -1,8 +1,0 @@
-numpy==1.26.4
-pandas==2.2.2
-tensorflow==2.18.0
-scikit-learn==1.5.2
-matplotlib==3.8.4
-keras==3.6.0
-geopandas==1.0.1
-seaborn==0.13.2
