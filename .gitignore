@@ -5,3 +5,6 @@
 __pycache__
 convert.ipynb
 combined.geojson
+.pytest_cache
+.cache.sqlite
+/api/res
