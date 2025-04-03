@@ -8,7 +8,6 @@ from fastapi import HTTPException
 from colorama import Fore
 from objects import Objects
 from pydantic_data import other_model
-from features_model import FeaturesModel
 import pandas as pd
 
 class Predictor:
