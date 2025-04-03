@@ -3,13 +3,13 @@ from predictor import Predictor
 from pydantic_data import data_model
 import uvicorn
 
-app = FastAPI()
+app = FastAPI(title="ML API система прогнозирования серьезности ДТП")
 predictor = Predictor()
 
 @app.post("/predict")
 def predict(data: data_model.Data):
     return predictor.predict(data)
 
-
-if __name__ == "__main__":
-    uvicorn.run(app, host="localhost", port=8000)
+@app.get("/")
+async def home():
+    return {"message": "ML API система прогнозирования серьезности ДТП"}
