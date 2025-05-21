@@ -1,7 +1,6 @@
 from fastapi import FastAPI
 from predictor import Predictor
 from pydantic_data import data_model
-import uvicorn
 
 app = FastAPI(title="ML API система прогнозирования серьезности ДТП")
 predictor = Predictor()
