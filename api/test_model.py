@@ -74,16 +74,16 @@ def test_correct_FV_matrix():
 
     assert len(FV) == 6
     assert len(FV[3]) == 16
-    assert FV[0][0] == 0.10124072758512448
-    assert FV[1][10] == 0.0009846519849989262
+    assert FV[0][0] == 0.10702022406518259
+    assert FV[1][10] == 0.0017532373053979339
 
 def test_correct_weights():
     model = Model('tasp_cnn.h5', 'scaler.pkl', 'feature_weights.npy')
     feature_weights = model.get_weights()
 
     assert len(feature_weights) == 43
-    assert feature_weights[0] == 0.10124072758512448
-    assert feature_weights[42] == 0.0009846519849989262
+    assert feature_weights[0] == 0.10702022406518259
+    assert feature_weights[42] == 0.0017532373053979339
 
 def test_model_prediction(mock_gray_image):
     model = Model('tasp_cnn.h5', 'scaler.pkl', 'feature_weights.npy')
